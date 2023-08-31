@@ -1,0 +1,14 @@
+from typing import List
+def longestcommonprefix(list1:List[str])->str:
+    if not list1:
+        print("Empty List")
+    else:
+        max_list=max(list1)
+        min_list=min(list1)
+        for i in range(len(max_list)):
+            if(max_list[:i]!=min_list[:i]):
+                return max_list[:i-1]
+
+
+strings=["flower","flow","flight"]
+print(longestcommonprefix(strings))
