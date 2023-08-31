@@ -1,0 +1,21 @@
+class Node:
+    def __init__(self, data=None):
+        self.data=data
+        self.next=None
+    
+class LinkedList:
+    def __init__(self):
+        self.headval=None
+    def printLinkedList(self):
+        printval=self.headval
+        while(printval is not None):
+            print(printval.data)
+            printval=printval.next
+
+List1=LinkedList()
+List1.headval=Node("Monday")
+e2=Node("Tuesday")
+e3=Node("Wednesday")
+List1.headval.next=e2
+e2.next=e3
+List1.printLinkedList()
